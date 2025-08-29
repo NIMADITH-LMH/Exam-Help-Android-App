@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CertificateActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/certificateContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvCertificateTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="CERTIFICATE OF COMPLETION"
+                android:textColor="#FFD700"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivCertificateBadge"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="Certificate Badge"
+                android:src="@drawable/ic_gold_certificate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCertificateTitle" />
+
+            <TextView
+                android:id="@+id/tvPresentTo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="This certificate is presented to"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivCertificateBadge" />
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Student Name"
+                android:textColor="#000000"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPresentTo" />
+
+            <TextView
+                android:id="@+id/tvForCompleting"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="For successfully completing the course:"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvUserName" />
+
+            <TextView
+                android:id="@+id/tvCourseName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Course Name"
+                android:textColor="#4CAF50"
+                android:textSize="22sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvForCompleting" />
+
+            <TextView
+                android:id="@+id/tvCompletionDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="Completed on January 1, 2024"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCourseName" />
+
+            <TextView
+                android:id="@+id/tvSignature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"
+                android:text="Instructor Signature"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCompletionDate" />
+
+            <View
+                android:id="@+id/signatureLine"
+                android:layout_width="120dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSignature" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnSaveCertificate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_primary"
+        android:text="Save as PDF"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@+id/btnShare"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/certificateContainer" />
+
+    <Button
+        android:id="@+id/btnShare"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_secondary"
+        android:text="Share"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSaveCertificate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnSaveCertificate"
+        app:layout_constraintTop_toTopOf="@+id/btnSaveCertificate" />
+        
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSaveCertificate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

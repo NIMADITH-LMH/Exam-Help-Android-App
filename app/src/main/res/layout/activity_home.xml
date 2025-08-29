@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp">
+
+            <!-- Top Bar -->
+            <TextView
+                android:id="@+id/tvAppName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Education App"
+                android:textColor="@color/primary_blue"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivNotification"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_notification"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvAppName"
+                app:layout_constraintBottom_toBottomOf="@id/tvAppName"
+                android:contentDescription="Notifications" />
+
+            <!-- Search Bar -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardSearch"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAppName">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/ivSearch"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:src="@drawable/ic_search"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="Search Icon" />
+
+                    <TextView
+                        android:id="@+id/tvSearchPlaceholder"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Search for a course"
+                        android:textColor="@color/text_secondary"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivSearch"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Banner -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardBanner"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardSearch">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_blue">
+
+                    <TextView
+                        android:id="@+id/tvBannerTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:text="Learn new skills!"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.6" />
+
+                    <TextView
+                        android:id="@+id/tvBannerSubtitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Get 30% off on all premium courses today"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@id/tvBannerTitle"
+                        app:layout_constraintTop_toBottomOf="@id/tvBannerTitle"
+                        app:layout_constraintWidth_percent="0.6" />
+
+                    <Button
+                        android:id="@+id/btnBannerAction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/button_white_rounded"
+                        android:paddingHorizontal="16dp"
+                        android:text="Learn More"
+                        android:textColor="@color/primary_blue"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@id/tvBannerSubtitle"
+                        app:layout_constraintTop_toBottomOf="@id/tvBannerSubtitle" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/ic_launcher_foreground"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="Banner Image" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Recommended Courses -->
+            <TextView
+                android:id="@+id/tvRecommendedTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="Recommended For You"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardBanner" />
+
+            <TextView
+                android:id="@+id/tvViewAllRecommended"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="View All"
+                android:textColor="@color/primary_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvRecommendedTitle"
+                app:layout_constraintBottom_toBottomOf="@id/tvRecommendedTitle" />
+
+            <HorizontalScrollView
+                android:id="@+id/hsvRecommendedCourses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:scrollbars="none"
+                android:fadeScrollbars="false"
+                app:layout_constraintTop_toBottomOf="@id/tvRecommendedTitle">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvRecommendedCourses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="8dp" />
+            </HorizontalScrollView>
+
+            <!-- Trending Courses -->
+            <TextView
+                android:id="@+id/tvTrendingTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="Trending Courses"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hsvRecommendedCourses" />
+
+            <TextView
+                android:id="@+id/tvViewAllTrending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="View All"
+                android:textColor="@color/primary_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvTrendingTitle"
+                app:layout_constraintBottom_toBottomOf="@id/tvTrendingTitle" />
+
+            <HorizontalScrollView
+                android:id="@+id/hsvTrendingCourses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:scrollbars="none"
+                android:fadeScrollbars="false"
+                app:layout_constraintTop_toBottomOf="@id/tvTrendingTitle">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvTrendingCourses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="8dp" />
+            </HorizontalScrollView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnNavHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Home"
+            android:src="@drawable/ic_nav_home_active" />
+
+        <ImageButton
+            android:id="@+id/btnNavSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Search"
+            android:src="@drawable/ic_nav_search" />
+
+        <ImageButton
+            android:id="@+id/btnNavCourses"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="My Courses"
+            android:src="@drawable/ic_nav_courses" />
+
+        <ImageButton
+            android:id="@+id/btnNavProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Profile"
+            android:src="@drawable/ic_nav_profile" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

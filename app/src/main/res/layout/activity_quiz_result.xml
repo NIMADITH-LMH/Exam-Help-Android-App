@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/textViewResultTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz Results"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textViewResultTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textViewScoreLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Score"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/textViewScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 / 0"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_blue"
+                app:layout_constraintTop_toBottomOf="@id/textViewScoreLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/textViewPercentageLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Percentage"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/textViewPercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_blue"
+                app:layout_constraintTop_toBottomOf="@id/textViewPercentageLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp" />
+
+            <ImageView
+                android:id="@+id/imageViewResult"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/quiz_result_average"
+                app:layout_constraintTop_toBottomOf="@id/textViewScore"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="24dp" />
+
+            <TextView
+                android:id="@+id/textViewResultMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keep practicing!"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_blue"
+                app:layout_constraintTop_toBottomOf="@id/imageViewResult"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnCertificate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="View Certificate"
+        android:textColor="@color/white"
+        android:background="@drawable/button_success_rounded"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnContinue"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:textColor="@color/white"
+        android:background="@drawable/button_blue_rounded"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnTryAgain"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnTryAgain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Try Again"
+        android:textColor="@color/primary_blue"
+        android:background="@drawable/button_white_rounded"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

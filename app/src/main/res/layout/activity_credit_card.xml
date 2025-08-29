@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="9:41"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Back"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime" />
+
+    <TextView
+        android:id="@+id/tvCreditCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Credit Card"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnBack" />
+
+    <TextView
+        android:id="@+id/tvCardNumberLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="Card Number"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBack" />
+
+    <EditText
+        android:id="@+id/etCardNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/card_white_rounded"
+        android:drawableStart="@drawable/ic_credit_card"
+        android:drawableEnd="@drawable/ic_visa"
+        android:drawablePadding="8dp"
+        android:hint="8546 - 5646 - 4882 - 3157"
+        android:inputType="number"
+        android:padding="16dp"
+        android:textColorHint="#AAAAAA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCardNumberLabel" />
+
+    <LinearLayout
+        android:id="@+id/expiryContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCardNumber">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expiry Date"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spinnerMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_white_rounded"
+                    android:entries="@array/months"
+                    android:padding="12dp"
+                    android:spinnerMode="dropdown" />
+
+                <Spinner
+                    android:id="@+id/spinnerYear"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_white_rounded"
+                    android:entries="@array/years"
+                    android:padding="12dp"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CVV"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etCvv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/card_white_rounded"
+                android:drawableEnd="@drawable/ic_visibility"
+                android:drawablePadding="8dp"
+                android:hint="*****"
+                android:inputType="numberPassword"
+                android:maxLength="3"
+                android:padding="12dp"
+                android:textColorHint="#AAAAAA" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvCardHolderLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Card Holder"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expiryContainer" />
+
+    <EditText
+        android:id="@+id/etCardHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/card_white_rounded"
+        android:hint="Angela Christina"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        android:textColorHint="#AAAAAA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCardHolderLabel" />
+
+    <Button
+        android:id="@+id/btnBecomeMember"
+        style="@style/BlueButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="Become Member"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

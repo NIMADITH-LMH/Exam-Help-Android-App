@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="9:41"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivSuccess"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:contentDescription="Success"
+        android:src="@drawable/ic_success"
+        app:layout_constraintBottom_toTopOf="@+id/tvCongratulations"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tvCongratulations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Congratulations!"
+        android:textColor="@color/text_primary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnBackToHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivSuccess" />
+
+    <Button
+        android:id="@+id/btnBackToHome"
+        style="@style/BlueButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:text="Back to Home"
+        app:layout_constraintBottom_toTopOf="@+id/tvShare"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCongratulations" />
+
+    <TextView
+        android:id="@+id/tvShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Share"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/shareOptions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBackToHome" />
+
+    <LinearLayout
+        android:id="@+id/shareOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvShare">
+
+        <ImageButton
+            android:id="@+id/btnWhatsApp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/circle_social_whatsapp"
+            android:contentDescription="WhatsApp"
+            android:src="@drawable/ic_whatsapp" />
+
+        <ImageButton
+            android:id="@+id/btnInstagram"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/circle_social_instagram"
+            android:contentDescription="Instagram"
+            android:src="@drawable/ic_instagram" />
+
+        <ImageButton
+            android:id="@+id/btnFacebook"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/circle_social_facebook"
+            android:contentDescription="Facebook"
+            android:src="@drawable/ic_facebook" />
+
+        <ImageButton
+            android:id="@+id/btnTwitter"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/circle_social_twitter"
+            android:contentDescription="Twitter"
+            android:src="@drawable/ic_twitter" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

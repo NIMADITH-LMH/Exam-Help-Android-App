@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Methods"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/courseInfoCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvCourseTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Advanced Python Programming"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCourseDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Duration: 12 weeks"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCourseTitle" />
+
+            <TextView
+                android:id="@+id/tvCoursePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="$99.99"
+                android:textColor="@color/primary_blue"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCourseDuration" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvPaymentMethodsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Select Payment Method"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/courseInfoCard" />
+
+    <RadioGroup
+        android:id="@+id/rgPaymentMethods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPaymentMethodsTitle">
+
+        <!-- Credit Card Option -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardCreditCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="1dp">
+
+            <RadioButton
+                android:id="@+id/rbCreditCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/transparent"
+                android:drawableEnd="@drawable/ic_credit_cards"
+                android:checked="true"
+                android:minHeight="64dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="Credit or Debit Card"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- PayPal Option -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardPaypal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="1dp">
+
+            <RadioButton
+                android:id="@+id/rbPaypal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/transparent"
+                android:drawableEnd="@drawable/ic_paypal"
+                android:minHeight="64dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="PayPal"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Google Pay Option -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardGooglePay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="1dp">
+
+            <RadioButton
+                android:id="@+id/rbGooglePay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/transparent"
+                android:drawableEnd="@drawable/ic_google_pay"
+                android:minHeight="64dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="Google Pay"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Apple Pay Option -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardApplePay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="1dp">
+
+            <RadioButton
+                android:id="@+id/rbApplePay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/transparent"
+                android:drawableEnd="@drawable/ic_apple_pay"
+                android:minHeight="64dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="Apple Pay"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
+        </androidx.cardview.widget.CardView>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnContinue"
+        style="@style/BlueButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="Continue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

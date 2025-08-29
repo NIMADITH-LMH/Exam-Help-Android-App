@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Standard colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- 60% - Primary colors (Main UI elements and backgrounds) -->
+    <color name="colorPrimary">#5E60CE</color>
+    <color name="colorPrimaryDark">#4A4B9F</color>
+    <color name="primary_blue">#2E7BEE</color>
+    <color name="background_white">#FFFFFF</color>
+    <color name="light_gray">#F4F4F4</color>
+    
+    <!-- 30% - Secondary colors (Supporting UI elements) -->
+    <color name="secondary_color">#5B5FC7</color>
+    <color name="secondary_blue">#4285F4</color>
+    <color name="light_blue">#E8F1FD</color>
+    <color name="progress_blue">#3F7FF5</color>
+    <color name="text_primary">#333333</color>
+    <color name="text_secondary">#666666</color>
+    
+    <!-- 10% - Accent colors (Call to action, highlights) -->
+    <color name="colorAccent">#FF7C4D</color>
+    <color name="light_green">#E6F4EA</color>
+    <color name="light_orange">#FEF1E5</color>
+    <color name="colorSuccess">#4CAF50</color>
+    <color name="colorWarning">#FFC107</color>
+    <color name="colorError">#F44336</color>
+    
+    <!-- Other utility colors -->
+    <color name="icon_blue">#2E7BEE</color>
+    <color name="icon_color">#757575</color>
+</resources>

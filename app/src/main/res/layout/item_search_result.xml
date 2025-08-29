@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="2dp">
+    
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:background="?attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/ivSearchResultImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/img_course_math"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
+        android:contentDescription="Course Image" />
+
+    <TextView
+        android:id="@+id/tvSearchResultTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Algebra Fundamentals"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintStart_toEndOf="@id/ivSearchResultImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivSearchResultImage" />
+
+    <TextView
+        android:id="@+id/tvSearchResultCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mathematics"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/tvSearchResultTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvSearchResultTitle"
+        android:layout_marginTop="4dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="@id/tvSearchResultCategory"
+        app:layout_constraintTop_toBottomOf="@id/tvSearchResultCategory"
+        app:layout_constraintBottom_toBottomOf="@id/ivSearchResultImage"
+        android:layout_marginTop="4dp">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_star"
+            android:contentDescription="Rating Star" />
+
+        <TextView
+            android:id="@+id/tvSearchResultRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.8"
+            android:textColor="@color/text_primary"
+            android:textSize="12sp"
+            android:layout_marginStart="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="•"
+            android:textColor="@color/text_secondary"
+            android:layout_marginHorizontal="8dp" />
+
+        <TextView
+            android:id="@+id/tvSearchResultLessons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25 lessons"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="•"
+            android:textColor="@color/text_secondary"
+            android:layout_marginHorizontal="8dp" />
+
+        <TextView
+            android:id="@+id/tvSearchResultPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$19.99"
+            android:textColor="@color/primary_blue"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

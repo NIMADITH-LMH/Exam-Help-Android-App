@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="9:41"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnClose"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Close"
+        android:src="@drawable/ic_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime" />
+
+    <ProgressBar
+        android:id="@+id/quizProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:progress="66"
+        android:progressDrawable="@drawable/progress_drawable"
+        app:layout_constraintBottom_toBottomOf="@+id/btnClose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnClose"
+        app:layout_constraintTop_toTopOf="@+id/btnClose" />
+
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:text="What is the basic unit of life?"
+        android:textAlignment="center"
+        android:textColor="@color/text_primary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnClose" />
+
+    <TextView
+        android:id="@+id/tvQuestionCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="1 OF 15"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestion" />
+
+    <RadioGroup
+        android:id="@+id/rgOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestionCount">
+
+        <RadioButton
+            android:id="@+id/rbOptionA"
+            style="@style/QuizOptionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:button="@null"
+            android:checked="true"
+            android:text="A. Cell" />
+
+        <RadioButton
+            android:id="@+id/rbOptionB"
+            style="@style/QuizOptionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:button="@null"
+            android:text="B. Organ" />
+
+        <RadioButton
+            android:id="@+id/rbOptionC"
+            style="@style/QuizOptionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:button="@null"
+            android:text="C. Atom" />
+
+        <RadioButton
+            android:id="@+id/rbOptionD"
+            style="@style/QuizOptionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="D. Tissue" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnContinue"
+        style="@style/BlueButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="Continue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

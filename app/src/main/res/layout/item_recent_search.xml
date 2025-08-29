@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="12dp"
+    android:background="?attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/ivSearchIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_recent_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="Recent Search Icon" />
+
+    <TextView
+        android:id="@+id/tvSearchTerm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Algebra"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toEndOf="@id/ivSearchIcon"
+        app:layout_constraintEnd_toStartOf="@id/ivRemove"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivRemove"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_remove"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="Remove Icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

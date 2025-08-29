@@ -1,0 +1,1448 @@
+package com.example.myapplication
+
+import androidx.annotation.DrawableRes
+
+object CourseDataProvider {
+
+    // =================== LESSON METHODS FOR NEW COURSES ===================
+
+    private fun getEnglishLiteratureLessons(): List<Lesson> {
+        return listOf(
+            Lesson(
+                1,
+                "Introduction to Literary Analysis",
+                "Learn the basics of analyzing literature and identifying key themes."
+            ),
+            Lesson(
+                2,
+                "Poetry and Poetic Devices",
+                "Explore various forms of poetry and common poetic devices."
+            ),
+            Lesson(
+                3,
+                "Shakespearean Drama",
+                "Dive into the works of Shakespeare and theatrical conventions."
+            ),
+            Lesson(
+                4,
+                "The Novel: Structure and Themes",
+                "Understand novel structure and how themes develop across longer works."
+            ),
+            Lesson(
+                5,
+                "Modern Literary Movements",
+                "Study 20th and 21st century literary movements and their cultural contexts."
+            ),
+            Lesson(
+                6,
+                "Literary Criticism",
+                "Learn different approaches to literary criticism and interpretation."
+            ),
+            Lesson(
+                7,
+                "Character Development",
+                "Analyze how authors create complex characters across different works."
+            ),
+            Lesson(
+                8,
+                "Setting and Atmosphere",
+                "Explore how setting influences story and creates atmosphere."
+            ),
+            Lesson(
+                9,
+                "Symbolism and Imagery",
+                "Identify and interpret symbols and imagery in literature."
+            ),
+            Lesson(
+                10,
+                "Narrative Perspective",
+                "Study different narrative perspectives and their effects."
+            ),
+            Lesson(
+                11,
+                "Literary Genres",
+                "Compare and contrast various literary genres and their conventions."
+            ),
+            Lesson(
+                12,
+                "Cultural Context in Literature",
+                "Understand how historical and cultural contexts shape literary works."
+            ),
+            Lesson(
+                13,
+                "Writing Literary Analysis Essays",
+                "Learn techniques for effective literary analysis writing."
+            ),
+            Lesson(
+                14,
+                "Contemporary Literature Trends",
+                "Explore current trends and emerging voices in literature."
+            )
+        )
+    }
+
+    private fun getPhysicsBasicsLessons(): List<Lesson> {
+        return listOf(
+            Lesson(
+                1,
+                "Introduction to Physics",
+                "Overview of physics principles and scientific method."
+            ),
+            Lesson(
+                2,
+                "Mechanics: Motion in One Dimension",
+                "Understanding velocity, acceleration, and displacement."
+            ),
+            Lesson(
+                3,
+                "Newton's Laws of Motion",
+                "Study the fundamental laws governing motion of objects."
+            ),
+            Lesson(
+                4,
+                "Work, Energy, and Power",
+                "Explore the relationship between work, energy, and power."
+            ),
+            Lesson(
+                5,
+                "Momentum and Collisions",
+                "Learn about momentum conservation and types of collisions."
+            ),
+            Lesson(
+                6,
+                "Circular Motion and Gravitation",
+                "Understand circular motion and gravitational forces."
+            ),
+            Lesson(7, "Rotational Motion", "Study rotational kinematics and dynamics."),
+            Lesson(
+                8,
+                "Oscillations and Waves",
+                "Explore simple harmonic motion and wave mechanics."
+            ),
+            Lesson(
+                9,
+                "Thermodynamics",
+                "Learn about heat, temperature, and laws of thermodynamics."
+            ),
+            Lesson(
+                10,
+                "Electric Charges and Fields",
+                "Study electric charges, Coulomb's law, and electric fields."
+            ),
+            Lesson(
+                11,
+                "Electric Potential and Capacitance",
+                "Understand electric potential energy and capacitors."
+            ),
+            Lesson(
+                12,
+                "Current, Resistance, and DC Circuits",
+                "Learn about electric current, Ohm's law, and circuit analysis."
+            ),
+            Lesson(
+                13,
+                "Magnetic Fields and Forces",
+                "Explore magnetic phenomena and electromagnetic induction."
+            ),
+            Lesson(
+                14,
+                "Electromagnetic Waves",
+                "Study the properties and applications of electromagnetic waves."
+            ),
+            Lesson(15, "Optics", "Learn about reflection, refraction, and optical instruments."),
+            Lesson(16, "Modern Physics", "Introduction to relativity and quantum mechanics.")
+        )
+    }
+
+    private fun getComputerScienceLessons(): List<Lesson> {
+        return listOf(
+            Lesson(
+                1,
+                "Introduction to Computing",
+                "Understand computer systems and computational thinking."
+            ),
+            Lesson(2, "Programming Fundamentals", "Learn basic programming concepts and syntax."),
+            Lesson(
+                3,
+                "Data Types and Variables",
+                "Explore different data types and variable declarations."
+            ),
+            Lesson(
+                4,
+                "Control Structures",
+                "Study conditional statements and loops for program control."
+            ),
+            Lesson(
+                5,
+                "Functions and Methods",
+                "Learn to organize code using functions and methods."
+            ),
+            Lesson(
+                6,
+                "Object-Oriented Programming",
+                "Understand classes, objects, inheritance, and polymorphism."
+            ),
+            Lesson(
+                7,
+                "Data Structures: Arrays and Lists",
+                "Explore array and list implementations and operations."
+            ),
+            Lesson(
+                8,
+                "Data Structures: Stacks and Queues",
+                "Learn about stack and queue implementations."
+            ),
+            Lesson(
+                9,
+                "Data Structures: Trees and Graphs",
+                "Study tree and graph structures and algorithms."
+            ),
+            Lesson(10, "Algorithms: Searching", "Explore linear and binary search algorithms."),
+            Lesson(
+                11,
+                "Algorithms: Sorting",
+                "Learn various sorting algorithms and their complexity."
+            ),
+            Lesson(12, "Algorithm Analysis", "Study Big O notation and algorithm efficiency."),
+            Lesson(13, "Recursion", "Understand recursive algorithms and their implementation."),
+            Lesson(
+                14,
+                "File Operations and I/O",
+                "Learn to work with files and handle input/output."
+            ),
+            Lesson(15, "Exception Handling", "Study error handling and exception management."),
+            Lesson(16, "Database Fundamentals", "Introduction to databases and SQL."),
+            Lesson(17, "Web Development Basics", "Learn HTML, CSS, and JavaScript fundamentals."),
+            Lesson(
+                18,
+                "Software Development Lifecycle",
+                "Understand the process of developing software applications."
+            ),
+            Lesson(
+                19,
+                "Software Testing",
+                "Learn different testing methodologies and best practices."
+            ),
+            Lesson(20, "Ethics in Computing", "Explore ethical considerations in computer science.")
+        )
+    }
+
+    private fun getSpanishLessons(): List<Lesson> {
+        return listOf(
+            Lesson(
+                1,
+                "Basic Spanish Greetings",
+                "Learn common greetings and introductions in Spanish."
+            ),
+            Lesson(
+                2,
+                "Spanish Alphabet and Pronunciation",
+                "Master the Spanish alphabet and proper pronunciation."
+            ),
+            Lesson(
+                3,
+                "Numbers and Counting",
+                "Learn to count and use numbers in various contexts."
+            ),
+            Lesson(4, "Personal Pronouns", "Understand and use Spanish personal pronouns."),
+            Lesson(
+                5,
+                "Regular Verbs: Present Tense",
+                "Learn to conjugate regular verbs in present tense."
+            ),
+            Lesson(
+                6,
+                "Common Vocabulary: Family",
+                "Build vocabulary related to family members and relationships."
+            ),
+            Lesson(
+                7,
+                "Common Vocabulary: Daily Activities",
+                "Learn words and phrases for everyday activities."
+            ),
+            Lesson(
+                8,
+                "Irregular Verbs: Present Tense",
+                "Master common irregular verbs in present tense."
+            ),
+            Lesson(9, "Asking Questions", "Learn to form questions and understand question words."),
+            Lesson(10, "Telling Time", "Express time and understand time-related phrases."),
+            Lesson(
+                11,
+                "Days, Months, and Seasons",
+                "Learn vocabulary for calendar dates and seasons."
+            ),
+            Lesson(
+                12,
+                "Food and Dining",
+                "Build vocabulary for food items and restaurant interactions."
+            ),
+            Lesson(13, "Shopping and Money", "Learn phrases for shopping and discussing prices."),
+            Lesson(
+                14,
+                "Travel and Directions",
+                "Master vocabulary for travel and giving/following directions."
+            ),
+            Lesson(
+                15,
+                "Past Tense: Introduction",
+                "Introduction to past tense verbs and their usage."
+            ),
+            Lesson(16, "Weather and Climate", "Learn to discuss weather conditions and forecasts."),
+            Lesson(
+                17,
+                "Health and Emergencies",
+                "Build vocabulary for health issues and emergency situations."
+            ),
+            Lesson(
+                18,
+                "Cultural Insights: Hispanic World",
+                "Explore cultural aspects of Spanish-speaking countries."
+            )
+        )
+    }
+
+    private fun getGeometryLessons(): List<Lesson> {
+        return listOf(
+            Lesson(
+                1,
+                "Introduction to Geometry",
+                "Learn basic geometric concepts and terminology."
+            ),
+            Lesson(2, "Points, Lines, and Angles", "Understand fundamental elements of geometry."),
+            Lesson(
+                3,
+                "Triangles: Classification",
+                "Explore different types of triangles and their properties."
+            ),
+            Lesson(
+                4,
+                "Triangles: Congruence",
+                "Learn about triangle congruence and related theorems."
+            ),
+            Lesson(
+                5,
+                "Triangles: Similarity",
+                "Study similar triangles and proportional relationships."
+            ),
+            Lesson(
+                6,
+                "Right Triangles and Trigonometry",
+                "Explore the Pythagorean theorem and trigonometric ratios."
+            ),
+            Lesson(
+                7,
+                "Quadrilaterals",
+                "Learn about different types of quadrilaterals and their properties."
+            ),
+            Lesson(8, "Circles: Basic Properties", "Understand circles, arcs, and central angles."),
+            Lesson(
+                9,
+                "Circles: Tangents and Secants",
+                "Study relationships involving tangents and secants."
+            ),
+            Lesson(
+                10,
+                "Area of 2D Shapes",
+                "Learn formulas for calculating areas of various 2D shapes."
+            ),
+            Lesson(
+                11,
+                "Surface Area of 3D Shapes",
+                "Explore methods for calculating surface area of 3D objects."
+            ),
+            Lesson(12, "Volume of 3D Shapes", "Study volume calculations for different 3D solids."),
+            Lesson(
+                13,
+                "Coordinate Geometry",
+                "Learn about the coordinate plane and graphing geometric shapes."
+            ),
+            Lesson(
+                14,
+                "Geometric Transformations",
+                "Understand translations, rotations, reflections, and dilations."
+            ),
+            Lesson(15, "Geometric Proofs", "Master techniques for constructing geometric proofs.")
+        )
+    }
+
+    private fun getArtHistoryLessons(): List<Lesson> {
+        return listOf(
+            Lesson(
+                1,
+                "Introduction to Art History",
+                "Understand the study of art through historical contexts."
+            ),
+            Lesson(
+                2,
+                "Renaissance Art: Early Period",
+                "Explore the Early Renaissance and its innovations."
+            ),
+            Lesson(
+                3,
+                "Renaissance Art: High Period",
+                "Study the works of Leonardo, Michelangelo, and Raphael."
+            ),
+            Lesson(
+                4,
+                "Northern Renaissance",
+                "Learn about Renaissance developments in Northern Europe."
+            ),
+            Lesson(5, "Baroque Art", "Explore the dramatic and ornate Baroque period."),
+            Lesson(
+                6,
+                "Rococo and Neoclassicism",
+                "Compare the playful Rococo with the restrained Neoclassical style."
+            ),
+            Lesson(
+                7,
+                "Romanticism",
+                "Study emotional expression and individualism in Romantic art."
+            ),
+            Lesson(
+                8,
+                "Realism",
+                "Understand the shift toward realistic depictions of everyday life."
+            ),
+            Lesson(
+                9,
+                "Impressionism",
+                "Explore the revolutionary techniques of the Impressionists."
+            ),
+            Lesson(
+                10,
+                "Post-Impressionism",
+                "Study the diverse styles that followed Impressionism."
+            ),
+            Lesson(
+                11,
+                "Expressionism and Fauvism",
+                "Learn about emotional expression through color and form."
+            ),
+            Lesson(
+                12,
+                "Cubism and Early Abstraction",
+                "Understand the radical break from traditional representation."
+            ),
+            Lesson(
+                13,
+                "Dada and Surrealism",
+                "Explore art movements responding to world events and the unconscious."
+            ),
+            Lesson(
+                14,
+                "Abstract Expressionism",
+                "Study post-war American art and action painting."
+            ),
+            Lesson(
+                15,
+                "Pop Art and Minimalism",
+                "Compare these contrasting movements of the 1960s."
+            ),
+            Lesson(
+                16,
+                "Contemporary Art Trends",
+                "Explore diverse approaches in art from the 1980s to today."
+            )
+        )
+    }
+
+    // Adding the missing methods that were causing errors
+
+    private fun getAmericanLiteratureLessons(): List<Lesson> {
+        return listOf(
+            Lesson(
+                1,
+                "Colonial American Literature",
+                "Explore the writings of early American settlers and Puritans."
+            ),
+            Lesson(
+                2,
+                "The American Revolution in Literature",
+                "Study texts that shaped and reflected American independence."
+            ),
+            Lesson(
+                3,
+                "American Romanticism",
+                "Analyze works by Emerson, Thoreau, and the Transcendentalists."
+            ),
+            Lesson(
+                4,
+                "Edgar Allan Poe and Gothic Literature",
+                "Explore Poe's contributions to American Gothic tradition."
+            ),
+            Lesson(5, "American Renaissance", "Study Hawthorne, Melville, and other key figures."),
+            Lesson(
+                6,
+                "Walt Whitman and Emily Dickinson",
+                "Compare and contrast these influential American poets."
+            ),
+            Lesson(
+                7,
+                "Realism and Naturalism",
+                "Examine works by Mark Twain, Henry James, and others."
+            ),
+            Lesson(
+                8,
+                "The Harlem Renaissance",
+                "Explore African American literary and cultural expression."
+            ),
+            Lesson(
+                9,
+                "Modernism in American Literature",
+                "Study Faulkner, Hemingway, and other modernist writers."
+            ),
+            Lesson(
+                10,
+                "The Beat Generation",
+                "Analyze works by Kerouac, Ginsberg, and their contemporaries."
+            ),
+            Lesson(
+                11,
+                "Post-War American Fiction",
+                "Explore literature addressing American society after WWII."
+            ),
+            Lesson(
+                12,
+                "Postmodernism in American Literature",
+                "Study experimental and innovative literary approaches."
+            ),
+            Lesson(
+                13,
+                "Contemporary American Literature",
+                "Examine diverse voices in today's literary landscape."
+            ),
+            Lesson(
+                14,
+                "American Literary Criticism",
+                "Learn approaches to analyzing and interpreting American texts."
+            )
+        )
+    }
+
+    private fun getCalculusLessons(): List<Lesson> {
+        return listOf(
+            Lesson(
+                1,
+                "Introduction to Limits",
+                "Understand the concept of limits and their properties."
+            ),
+            Lesson(
+                2,
+                "Computing Limits",
+                "Learn techniques for evaluating different types of limits."
+            ),
+            Lesson(3, "Continuity", "Explore continuous functions and their characteristics."),
+            Lesson(
+                4,
+                "Derivatives: Definition and Basic Rules",
+                "Understand the derivative as a rate of change."
+            ),
+            Lesson(
+                5,
+                "Derivatives: Product and Quotient Rules",
+                "Learn rules for differentiating products and quotients."
+            ),
+            Lesson(6, "Derivatives: Chain Rule", "Master the chain rule for composite functions."),
+            Lesson(
+                7,
+                "Applications of Derivatives: Optimization",
+                "Solve optimization problems using calculus."
+            ),
+            Lesson(
+                8,
+                "Applications of Derivatives: Related Rates",
+                "Study problems involving related rates of change."
+            ),
+            Lesson(
+                9,
+                "Integrals: Antiderivatives",
+                "Learn about antiderivatives and their properties."
+            ),
+            Lesson(
+                10,
+                "Definite Integrals",
+                "Understand the definite integral as area under a curve."
+            ),
+            Lesson(
+                11,
+                "The Fundamental Theorem of Calculus",
+                "Explore the relationship between derivatives and integrals."
+            ),
+            Lesson(
+                12,
+                "Integration Techniques",
+                "Learn methods such as substitution and integration by parts."
+            ),
+            Lesson(
+                13,
+                "Applications of Integration",
+                "Apply integration to find areas, volumes, and more."
+            ),
+            Lesson(
+                14,
+                "Differential Equations",
+                "Introduction to solving basic differential equations."
+            )
+        )
+    }
+
+    private fun getChemistryLessons(): List<Lesson> {
+        return listOf(
+            Lesson(
+                1,
+                "Introduction to Chemistry",
+                "Overview of chemistry principles and scientific method."
+            ),
+            Lesson(
+                2,
+                "Atomic Structure",
+                "Understand the structure of atoms and subatomic particles."
+            ),
+            Lesson(
+                3,
+                "The Periodic Table",
+                "Learn about element organization and periodic trends."
+            ),
+            Lesson(4, "Chemical Bonding", "Study ionic, covalent, and metallic bonds."),
+            Lesson(
+                5,
+                "Chemical Reactions",
+                "Explore types of reactions and how to balance equations."
+            ),
+            Lesson(6, "Stoichiometry", "Learn quantitative relationships in chemical reactions."),
+            Lesson(7, "States of Matter", "Study properties of solids, liquids, and gases."),
+            Lesson(
+                8,
+                "Solutions and Solubility",
+                "Understand solution formation and factors affecting solubility."
+            ),
+            Lesson(9, "Acids and Bases", "Learn acid-base theories and pH calculations."),
+            Lesson(10, "Thermochemistry", "Explore energy changes in chemical reactions."),
+            Lesson(11, "Chemical Kinetics", "Study reaction rates and factors affecting them."),
+            Lesson(
+                12,
+                "Chemical Equilibrium",
+                "Understand dynamic equilibrium and equilibrium constants."
+            ),
+            Lesson(
+                13,
+                "Electrochemistry",
+                "Learn about redox reactions and electrochemical cells."
+            ),
+            Lesson(
+                14,
+                "Organic Chemistry Introduction",
+                "Study carbon-based compounds and their properties."
+            )
+        )
+    }
+
+    private fun getProgrammingLessons(): List<Lesson> {
+        return listOf(
+            Lesson(
+                1,
+                "Introduction to Programming",
+                "Learn basic programming concepts and computational thinking."
+            ),
+            Lesson(
+                2,
+                "Variables and Data Types",
+                "Understand how to store and manipulate different types of data."
+            ),
+            Lesson(
+                3,
+                "Control Flow: Conditionals",
+                "Master if-else statements and logical operators."
+            ),
+            Lesson(4, "Control Flow: Loops", "Learn to create loops for repeated operations."),
+            Lesson(5, "Functions and Methods", "Understand how to create reusable blocks of code."),
+            Lesson(
+                6,
+                "Data Structures: Arrays",
+                "Learn to work with collections of similar items."
+            ),
+            Lesson(
+                7,
+                "Data Structures: Lists and Dictionaries",
+                "Explore more complex data structures."
+            ),
+            Lesson(8, "Object-Oriented Programming Basics", "Introduction to classes and objects."),
+            Lesson(9, "Error Handling", "Learn to manage errors and exceptions in your code."),
+            Lesson(10, "File I/O", "Understand how to read from and write to files."),
+            Lesson(11, "Introduction to Algorithms", "Learn basic algorithmic thinking."),
+            Lesson(12, "Debugging Techniques", "Master the art of finding and fixing code errors."),
+            Lesson(13, "Version Control Basics", "Introduction to Git and managing code versions."),
+            Lesson(14, "Best Practices and Code Style", "Learn to write clean, maintainable code."),
+            Lesson(15, "Mini Project", "Apply your skills to build a simple application.")
+        )
+    }
+
+    // =================== QUIZ METHODS FOR NEW COURSES ===================
+
+    private fun getEnglishLiteratureQuizzes(): List<Quiz> {
+        return listOf(
+            Quiz(
+                1,
+                "Literary Analysis Fundamentals",
+                listOf(
+                    QuizQuestion(
+                        1, "What is a theme in literature?",
+                        listOf(
+                            "The main character in a story",
+                            "A recurring idea or concept in a literary work",
+                            "The setting of a novel",
+                            "The title of a poem"
+                        ),
+                        1
+                    ),
+                    QuizQuestion(
+                        2, "Which of the following is NOT a common literary device?",
+                        listOf("Metaphor", "Simile", "Hyperbole", "Pagination"),
+                        3
+                    ),
+                    QuizQuestion(
+                        3, "What is the purpose of analyzing literature?",
+                        listOf(
+                            "To memorize the plot",
+                            "To understand deeper meanings and cultural significance",
+                            "To identify the publication date",
+                            "To count the number of chapters"
+                        ),
+                        1
+                    )
+                ),
+                30
+            ),
+            Quiz(
+                2,
+                "Poetry and Drama",
+                listOf(
+                    QuizQuestion(
+                        1, "What is iambic pentameter?",
+                        listOf(
+                            "A type of poem with 5 lines",
+                            "A metrical pattern with five iambic feet per line",
+                            "A rhyme scheme",
+                            "A modern poetic movement"
+                        ),
+                        1
+                    ),
+                    QuizQuestion(
+                        2, "Which playwright is known for tragedies like 'Hamlet' and 'Macbeth'?",
+                        listOf(
+                            "Oscar Wilde",
+                            "Tennessee Williams",
+                            "William Shakespeare",
+                            "Arthur Miller"
+                        ),
+                        2
+                    ),
+                    QuizQuestion(
+                        3, "What is a soliloquy in drama?",
+                        listOf(
+                            "A conversation between two characters",
+                            "A speech given by a character alone on stage",
+                            "The final scene of a play",
+                            "A comic relief moment"
+                        ),
+                        1
+                    )
+                ),
+                25
+            ),
+            Quiz(
+                3,
+                "Modern Literature",
+                listOf(
+                    QuizQuestion(
+                        1, "Which literary movement emphasized the irrational and unconscious?",
+                        listOf("Realism", "Romanticism", "Surrealism", "Naturalism"),
+                        2
+                    ),
+                    QuizQuestion(
+                        2, "Stream of consciousness is a narrative technique that:",
+                        listOf(
+                            "Follows a river metaphor throughout the text",
+                            "Presents a character's thoughts and feelings as they occur",
+                            "Always uses first-person narration",
+                            "Focuses only on action, not thoughts"
+                        ),
+                        1
+                    ),
+                    QuizQuestion(
+                        3, "What characterizes postmodern literature?",
+                        listOf(
+                            "Strict adherence to traditional forms",
+                            "Fragmentation, paradox, and questioning of grand narratives",
+                            "Focus on rural settings and simple characters",
+                            "Avoidance of social commentary"
+                        ),
+                        1
+                    )
+                ),
+                30
+            )
+        )
+    }
+
+    // Adding the missing quiz methods that were causing errors
+
+    private fun getAmericanLiteratureQuizzes(): List<Quiz> {
+        return listOf(
+            Quiz(
+                1,
+                "Early American Literature",
+                listOf(
+                    QuizQuestion(
+                        1, "Who wrote 'The Scarlet Letter'?",
+                        listOf(
+                            "Herman Melville",
+                            "Nathaniel Hawthorne",
+                            "Mark Twain",
+                            "Edgar Allan Poe"
+                        ),
+                        1
+                    ),
+                    QuizQuestion(
+                        2, "Which work is NOT associated with Transcendentalism?",
+                        listOf("Walden", "Self-Reliance", "Moby-Dick", "Nature"),
+                        2
+                    ),
+                    QuizQuestion(
+                        3, "What is a key theme in Puritan literature?",
+                        listOf(
+                            "Romantic love",
+                            "Religious salvation",
+                            "Political revolution",
+                            "Scientific discovery"
+                        ),
+                        1
+                    )
+                ),
+                20
+            ),
+            Quiz(
+                2,
+                "American Poetry",
+                listOf(
+                    QuizQuestion(
+                        1, "Which poet wrote 'I heard a Fly buzz - when I died'?",
+                        listOf(
+                            "Walt Whitman",
+                            "Emily Dickinson",
+                            "Robert Frost",
+                            "Langston Hughes"
+                        ),
+                        1
+                    ),
+                    QuizQuestion(
+                        2, "What poetry collection is Walt Whitman famous for?",
+                        listOf("Leaves of Grass", "The Waste Land", "North of Boston", "Ariel"),
+                        0
+                    ),
+                    QuizQuestion(
+                        3, "Which movement is Langston Hughes associated with?",
+                        listOf(
+                            "Beat Generation",
+                            "Harlem Renaissance",
+                            "Transcendentalism",
+                            "New Criticism"
+                        ),
+                        1
+                    )
+                ),
+                25
+            ),
+            Quiz(
+                3,
+                "Modern American Fiction",
+                listOf(
+                    QuizQuestion(
+                        1, "Who wrote 'The Great Gatsby'?",
+                        listOf(
+                            "Ernest Hemingway",
+                            "F. Scott Fitzgerald",
+                            "William Faulkner",
+                            "John Steinbeck"
+                        ),
+                        1
+                    ),
+                    QuizQuestion(
+                        2, "Which novel depicts the Joad family during the Great Depression?",
+                        listOf(
+                            "The Grapes of Wrath",
+                            "To Kill a Mockingbird",
+                            "The Sound and the Fury",
+                            "The Old Man and the Sea"
+                        ),
+                        0
+                    ),
+                    QuizQuestion(
+                        3, "What literary style is Hemingway known for?",
+                        listOf(
+                            "Verbose descriptions",
+                            "Ornate language",
+                            "Stream of consciousness",
+                            "Concise, direct prose"
+                        ),
+                        3
+                    )
+                ),
+                30
+            )
+        )
+    }
+
+    private fun getCalculusQuizzes(): List<Quiz> {
+        return listOf(
+            Quiz(
+                1,
+                "Limits and Continuity",
+                listOf(
+                    QuizQuestion(
+                        1, "What is the limit of (x²-1)/(x-1) as x approaches 1?",
+                        listOf("0", "1", "2", "Undefined"),
+                        2
+                    ),
+                    QuizQuestion(
+                        2, "A function is continuous at a point if:",
+                        listOf(
+                            "Its derivative exists at that point",
+                            "Its limit exists at that point",
+                            "Its limit equals its function value at that point",
+                            "It is differentiable at that point"
+                        ),
+                        2
+                    ),
+                    QuizQuestion(
+                        3, "What is the limit of sin(x)/x as x approaches 0?",
+                        listOf("0", "1", "∞", "Undefined"),
+                        1
+                    )
+                ),
+                25
+            ),
+            Quiz(
+                2,
+                "Derivatives",
+                listOf(
+                    QuizQuestion(
+                        1, "What is the derivative of x³?",
+                        listOf("3x²", "3x", "x²", "3"),
+                        0
+                    ),
+                    QuizQuestion(
+                        2, "The product rule states that the derivative of f(x)·g(x) is:",
+                        listOf(
+                            "f'(x)·g'(x)",
+                            "f'(x)·g(x) + f(x)·g'(x)",
+                            "f'(x)/g'(x)",
+                            "(f(x)+g(x))'"
+                        ),
+                        1
+                    ),
+                    QuizQuestion(
+                        3, "What is the derivative of sin(x)?",
+                        listOf("cos(x)", "-sin(x)", "-cos(x)", "tan(x)"),
+                        0
+                    )
+                ),
+                30
+            ),
+            Quiz(
+                3,
+                "Integration",
+                listOf(
+                    QuizQuestion(
+                        1, "What is the integral of 2x?",
+                        listOf("x²", "x² + C", "2x² + C", "x² - C"),
+                        1
+                    ),
+                    QuizQuestion(
+                        2, "The Fundamental Theorem of Calculus relates:",
+                        listOf(
+                            "Derivatives and algebraic expressions",
+                            "Limits and continuity",
+                            "Derivatives and definite integrals",
+                            "Sequences and series"
+                        ),
+                        2
+                    ),
+                    QuizQuestion(
+                        3, "Which substitution is appropriate for integrating sin²(x)?",
+                        listOf(
+                            "u = sin(x)",
+                            "u = x²",
+                            "u = sin²(x)",
+                            "Identity sin²(x) = (1-cos(2x))/2"
+                        ),
+                        3
+                    )
+                ),
+                35
+            )
+        )
+    }
+
+    private fun getChemistryQuizzes(): List<Quiz> {
+        return listOf(
+            Quiz(
+                1,
+                "Atomic Structure",
+                listOf(
+                    QuizQuestion(
+                        1, "What particle has a negative charge?",
+                        listOf("Proton", "Neutron", "Electron", "Nucleus"),
+                        2
+                    ),
+                    QuizQuestion(
+                        2, "What is the atomic number?",
+                        listOf(
+                            "The number of protons",
+                            "The number of neutrons",
+                            "The number of electrons",
+                            "The sum of protons and neutrons"
+                        ),
+                        0
+                    ),
+                    QuizQuestion(
+                        3, "Which scientist's model described electrons in cloud-like orbitals?",
+                        listOf("Bohr", "Schrödinger", "Rutherford", "Thompson"),
+                        1
+                    )
+                ),
+                20
+            ),
+            Quiz(
+                2,
+                "Chemical Bonding",
+                listOf(
+                    QuizQuestion(
+                        1, "What type of bond involves sharing electrons?",
+                        listOf("Ionic", "Covalent", "Metallic", "Hydrogen"),
+                        1
+                    ),
+                    QuizQuestion(
+                        2, "What is the electronegativity difference in a nonpolar covalent bond?",
+                        listOf(
+                            "Greater than 2.0",
+                            "Between 0.5 and 2.0",
+                            "Less than 0.5",
+                            "Exactly 0"
+                        ),
+                        2
+                    ),
+                    QuizQuestion(
+                        3, "What determines the geometry of a molecule?",
+                        listOf(
+                            "Atomic mass",
+                            "Electron configuration",
+                            "Electron pair repulsion",
+                            "Bond length"
+                        ),
+                        2
+                    )
+                ),
+                25
+            ),
+            Quiz(
+                3,
+                "Acids and Bases",
+                listOf(
+                    QuizQuestion(
+                        1, "What is the pH of a neutral solution at 25°C?",
+                        listOf("0", "1", "7", "14"),
+                        2
+                    ),
+                    QuizQuestion(
+                        2, "According to the Brønsted-Lowry definition, an acid is a:",
+                        listOf(
+                            "Proton donor",
+                            "Proton acceptor",
+                            "Electron donor",
+                            "Electron acceptor"
+                        ),
+                        0
+                    ),
+                    QuizQuestion(
+                        3, "What is the formula for calculating pH?",
+                        listOf("pH = log[H⁺]", "pH = -log[H⁺]", "pH = log[OH⁻]", "pH = -log[OH⁻]"),
+                        1
+                    )
+                ),
+                30
+            )
+        )
+    }
+
+    private fun getProgrammingQuizzes(): List<Quiz> {
+        return listOf(
+            Quiz(
+                1,
+                "Programming Fundamentals",
+                listOf(
+                    QuizQuestion(
+                        1, "Which is NOT a common programming data type?",
+                        listOf("Integer", "String", "Boolean", "Picture"),
+                        3
+                    ),
+                    QuizQuestion(
+                        2, "What is a variable?",
+                        listOf(
+                            "A mathematical equation",
+                            "A named storage location for data",
+                            "A fixed value",
+                            "A programming language"
+                        ),
+                        1
+                    ),
+                    QuizQuestion(
+                        3, "What does the following expression evaluate to: 5 + 3 * 2",
+                        listOf("16", "11", "13", "8"),
+                        3
+                    )
+                ),
+                20
+            ),
+            Quiz(
+                2,
+                "Control Structures",
+                listOf(
+                    QuizQuestion(
+                        1, "Which loop is guaranteed to execute at least once?",
+                        listOf("for loop", "while loop", "do-while loop", "foreach loop"),
+                        2
+                    ),
+                    QuizQuestion(
+                        2, "What is the purpose of an if statement?",
+                        listOf(
+                            "To repeat code",
+                            "To define a function",
+                            "To make decisions based on conditions",
+                            "To create a variable"
+                        ),
+                        2
+                    ),
+                    QuizQuestion(
+                        3,
+                        "What will the following code print: for(int i=0; i<5; i++) { print(i); }",
+                        listOf("0123", "01234", "1234", "12345"),
+                        1
+                    )
+                ),
+                25
+            ),
+            Quiz(
+                3,
+                "Functions and Data Structures",
+                listOf(
+                    QuizQuestion(
+                        1, "What is a function?",
+                        listOf(
+                            "A type of variable",
+                            "A reusable block of code",
+                            "A mathematical operation",
+                            "A data structure"
+                        ),
+                        1
+                    ),
+                    QuizQuestion(
+                        2,
+                        "Which data structure operates on a LIFO (Last In, First Out) principle?",
+                        listOf("Queue", "Stack", "Array", "Linked List"),
+                        1
+                    ),
+                    QuizQuestion(
+                        3, "What is recursion?",
+                        listOf(
+                            "A function that calls itself",
+                            "A type of loop",
+                            "A data structure",
+                            "A syntax error"
+                        ),
+                        0
+                    )
+                ),
+                30
+            )
+        )
+    }
+
+    fun getPopularCourses(): List<Course> {
+        return listOf(
+            Course(
+                id = 1,
+                title = "High School Algebra",
+                instructor = "Prof. Michael Brown",
+                rating = 4.8f,
+                numReviews = 125,
+                price = "$29.99",
+                imageUrl = R.drawable.img_course_math,
+                category = "Mathematics",
+                lessonsCount = 12,
+                level = "Beginner",
+                description = "Master algebra fundamentals with this comprehensive course designed for high school students. Learn equations, inequalities, functions, and more.",
+                lessons = getMathLessons(),
+                quizzes = getMathQuizzes()
+            ),
+            Course(
+                id = 2,
+                title = "Biology Fundamentals",
+                instructor = "Dr. Sarah Johnson",
+                rating = 4.7f,
+                numReviews = 98,
+                price = "$24.99",
+                imageUrl = R.drawable.img_course_biology,
+                category = "Science",
+                lessonsCount = 16,
+                level = "Beginner",
+                description = "Explore the fascinating world of biology from cells to ecosystems. Perfect for students looking to build a strong foundation in biological sciences.",
+                lessons = getBiologyLessons(),
+                quizzes = getBiologyQuizzes()
+            ),
+            Course(
+                id = 3,
+                title = "Intro to Spanish",
+                instructor = "Maria Rodriguez",
+                rating = 4.9f,
+                numReviews = 145,
+                price = "$19.99",
+                imageUrl = R.drawable.img_course_placeholder,
+                category = "Languages",
+                lessonsCount = 20,
+                level = "Beginner",
+                description = "Begin your journey to Spanish fluency with this engaging course covering vocabulary, grammar, and basic conversation skills.",
+                lessons = getSpanishLessons(),
+                quizzes = getSpanishQuizzes()
+            ),
+            Course(
+                id = 4,
+                title = "Calculus I",
+                instructor = "Dr. Alan Turing",
+                rating = 4.5f,
+                numReviews = 87,
+                price = "$34.99",
+                imageUrl = R.drawable.img_course_math,
+                category = "Mathematics",
+                lessonsCount = 15,
+                level = "Advanced",
+                description = "Master the fundamentals of calculus, including limits, derivatives, and integrals. Includes practical applications and problem-solving strategies.",
+                lessons = getCalculusLessons(),
+                quizzes = getCalculusQuizzes()
+            ),
+            Course(
+                id = 5,
+                title = "Chemistry 101",
+                instructor = "Prof. Marie Curie",
+                rating = 4.6f,
+                numReviews = 112,
+                price = "$29.99",
+                imageUrl = R.drawable.img_course_placeholder,
+                category = "Science",
+                lessonsCount = 18,
+                level = "Intermediate",
+                description = "Dive into the world of atoms, molecules, and chemical reactions. This course covers all fundamental chemistry concepts with engaging experiments.",
+                lessons = getChemistryLessons(),
+                quizzes = getChemistryQuizzes()
+            )
+        )
+    }
+
+    fun getTrendingCourses(): List<Course> {
+        return listOf(
+            Course(
+                id = 10,
+                title = "English Literature",
+                instructor = "Dr. Emily Wilson",
+                rating = 4.6f,
+                numReviews = 76,
+                price = "$22.99",
+                imageUrl = R.drawable.img_course_english,
+                category = "Language Arts",
+                lessonsCount = 14,
+                level = "Intermediate",
+                description = "Analyze classic and contemporary literature while developing critical thinking and writing skills. Explore various literary genres and techniques.",
+                lessons = getEnglishLiteratureLessons(),
+                quizzes = getEnglishLiteratureQuizzes()
+            ),
+            Course(
+                id = 11,
+                title = "Physics Basics",
+                instructor = "Prof. Robert Chen",
+                rating = 4.9f,
+                numReviews = 112,
+                price = "$27.99",
+                imageUrl = R.drawable.img_course_physics,
+                category = "Science",
+                lessonsCount = 16,
+                level = "Intermediate",
+                description = "Understand the fundamental laws governing our physical world. This course covers mechanics, thermodynamics, electricity, magnetism, and more.",
+                lessons = getPhysicsBasicsLessons(),
+                quizzes = getPhysicsBasicsQuizzes()
+            ),
+            Course(
+                id = 7,
+                title = "Geometry Essentials",
+                instructor = "Prof. Euclid Smith",
+                rating = 4.7f,
+                numReviews = 89,
+                price = "$24.99",
+                imageUrl = R.drawable.img_course_math,
+                category = "Mathematics",
+                lessonsCount = 15,
+                level = "Intermediate",
+                description = "Explore the principles of geometry from basic concepts to complex theorems. Learn about shapes, measurements, and spatial reasoning.",
+                lessons = getGeometryLessons(),
+                quizzes = getGeometryQuizzes()
+            ),
+            Course(
+                id = 8,
+                title = "American Literature",
+                instructor = "Dr. James Patterson",
+                rating = 4.5f,
+                numReviews = 142,
+                price = "$24.99",
+                imageUrl = R.drawable.img_course_english,
+                category = "Literature",
+                lessonsCount = 14,
+                level = "Intermediate",
+                description = "Explore the rich tapestry of American literature from colonial times to the present day, analyzing key authors, movements, and cultural contexts.",
+                lessons = getAmericanLiteratureLessons(),
+                quizzes = getAmericanLiteratureQuizzes()
+            ),
+            Course(
+                id = 9,
+                title = "Computer Programming Basics",
+                instructor = "Prof. Ada Lovelace",
+                rating = 4.9f,
+                numReviews = 325,
+                price = "$39.99",
+                imageUrl = R.drawable.img_course_english,
+                category = "Computer Science",
+                lessonsCount = 24,
+                level = "Beginner",
+                description = "Learn the fundamentals of programming including variables, control structures, functions, and basic algorithms. No prior experience required.",
+                lessons = getProgrammingLessons(),
+                quizzes = getProgrammingQuizzes()
+            )
+        )
+    }
+
+    fun getAllCourses(): List<Course> {
+        val popularCourses = getPopularCourses()
+        val trendingCourses = getTrendingCourses()
+        return popularCourses + trendingCourses
+    }
+
+    private fun getMathLessons(): List<Lesson> {
+        // Implementation omitted for brevity
+        return listOf(
+            Lesson(
+                1,
+                "Introduction to Algebra",
+                "Learn the basics of algebraic expressions"
+            )
+        )
+    }
+
+    private fun getMathQuizzes(): List<Quiz> {
+        // Implementation omitted for brevity
+        return listOf(
+            Quiz(
+                1, "Algebra Basics", listOf(
+                    QuizQuestion(
+                        1, "What is the value of x in 2x + 3 = 7?",
+                        listOf("1", "2", "3", "4"), 1
+                    )
+                ), 30
+            )
+        )
+    }
+
+    private fun getBiologyLessons(): List<Lesson> {
+        // Implementation omitted for brevity
+        return listOf(
+            Lesson(
+                1,
+                "Introduction to Biology",
+                "Learn the basics of biological sciences"
+            )
+        )
+    }
+
+    private fun getBiologyQuizzes(): List<Quiz> {
+        // Implementation omitted for brevity
+        return listOf(
+            Quiz(
+                1, "Cell Structure", listOf(
+                    QuizQuestion(
+                        1, "What is the powerhouse of the cell?",
+                        listOf("Nucleus", "Mitochondria", "Ribosome", "Golgi apparatus"), 1
+                    )
+                ), 30
+            )
+        )
+    }
+
+    private fun getSpanishQuizzes(): List<Quiz> {
+        // Implementation omitted for brevity
+        return listOf(
+            Quiz(
+                1, "Spanish Basics", listOf(
+                    QuizQuestion(
+                        1, "How do you say 'hello' in Spanish?",
+                        listOf("Adiós", "Hola", "Gracias", "Por favor"), 1
+                    )
+                ), 20
+            )
+        )
+    }
+
+    private fun getGeometryQuizzes(): List<Quiz> {
+        // Implementation omitted for brevity
+        return listOf(
+            Quiz(
+                1, "Triangles and Angles", listOf(
+                    QuizQuestion(
+                        1, "What is the sum of angles in a triangle?",
+                        listOf("90 degrees", "180 degrees", "270 degrees", "360 degrees"), 1
+                    )
+                ), 25
+            )
+        )
+    }
+
+    private fun getPhysicsBasicsQuizzes(): List<Quiz> {
+        // Implementation omitted for brevity
+        return listOf(
+            Quiz(
+                1, "Newton's Laws", listOf(
+                    QuizQuestion(
+                        1, "Newton's First Law states that:",
+                        listOf(
+                            "Force equals mass times acceleration",
+                            "Energy cannot be created or destroyed",
+                            "An object at rest stays at rest unless acted upon by an external force",
+                            "Every action has an equal and opposite reaction"
+                        ), 2
+                    )
+                ), 30
+            )
+        )
+    }
+
+    private fun getArtHistoryQuizzes(): List<Quiz> {
+        // Implementation omitted for brevity
+        return listOf(
+            Quiz(
+                1, "Renaissance Art", listOf(
+                    QuizQuestion(
+                        1, "Who painted the Mona Lisa?",
+                        listOf("Michelangelo", "Leonardo da Vinci", "Raphael", "Donatello"), 1
+                    )
+                ), 20
+            )
+        )
+    }
+}

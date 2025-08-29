@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="240dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Course Image -->
+        <ImageView
+            android:id="@+id/ivCourse"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_course_placeholder"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="Course Image" />
+
+        <!-- Course Title -->
+        <TextView
+            android:id="@+id/tvCourseTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="12dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="Course Title"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/ivCourse" />
+
+        <!-- Course Category -->
+        <TextView
+            android:id="@+id/tvCourseCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Category"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/tvCourseTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvCourseTitle" />
+
+        <!-- Bottom Info Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCourseCategory">
+
+            <!-- Rating -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_star"
+                    android:contentDescription="Rating Star" />
+
+                <TextView
+                    android:id="@+id/tvRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="4.8"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Dot Separator -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:text="•"
+                android:textColor="@color/text_secondary" />
+
+            <!-- Lessons Count -->
+            <TextView
+                android:id="@+id/tvLessonsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25 lessons"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,55 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorPrimaryVariant">@color/secondary_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" />
+    
+    <style name="SplashTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
+    </style>
+    
+    <style name="BlueButton">
+        <item name="android:background">@drawable/button_blue_rounded</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    
+    <style name="WhiteCard">
+        <item name="android:background">@drawable/card_white_rounded</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+    </style>
+
+    <style name="QuizOptionButton">
+        <item name="android:background">@drawable/quiz_option_selector</item>
+        <item name="android:textColor">@color/quiz_option_text_selector</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    
+    <style name="RatingBar" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="colorControlNormal">#CCCCCC</item>
+        <item name="colorControlActivated">@color/primary_blue</item>
+    </style>
+</resources>

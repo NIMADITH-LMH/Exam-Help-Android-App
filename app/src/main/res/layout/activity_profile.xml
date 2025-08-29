@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tvProfileTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Profile"
+        android:textColor="@color/text_primary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintTop_toBottomOf="@id/tvProfileTitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp">
+
+            <!-- Profile Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/ivProfileImage"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/img_profile"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:contentDescription="Profile Picture" />
+
+                    <TextView
+                        android:id="@+id/tvUsername"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Sarah Johnson"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivProfileImage"
+                        app:layout_constraintTop_toTopOf="@id/ivProfileImage" />
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="sarah.johnson@example.com"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/tvUsername"
+                        app:layout_constraintTop_toBottomOf="@id/tvUsername" />
+
+                    <Button
+                        android:id="@+id/btnEditProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:background="@drawable/button_blue_rounded"
+                        android:paddingHorizontal="24dp"
+                        android:text="Edit Profile"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@id/tvEmail"
+                        app:layout_constraintTop_toBottomOf="@id/tvEmail"
+                        app:layout_constraintBottom_toBottomOf="@id/ivProfileImage" />
+
+                    <TextView
+                        android:id="@+id/tvLevel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="High School"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:background="@drawable/level_intermediate_badge"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="4dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tvUsername"
+                        android:layout_marginEnd="8dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Profile Options -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardProfile">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- My Learning -->
+                    <TextView
+                        android:id="@+id/btnMyLearning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:drawableStart="@drawable/ic_learning"
+                        android:drawablePadding="16dp"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="16dp"
+                        android:text="My Learning"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/divider1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="56dp"
+                        android:background="@color/light_gray"
+                        app:layout_constraintTop_toBottomOf="@id/btnMyLearning" />
+
+                    <!-- Notifications -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/notificationContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/divider1">
+                        
+                        <TextView
+                            android:id="@+id/btnNotifications"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:drawableStart="@drawable/ic_notification"
+                            android:drawablePadding="16dp"
+                            android:paddingHorizontal="16dp"
+                            android:paddingVertical="16dp"
+                            android:text="Notifications"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+                            
+                        <TextView
+                            android:id="@+id/tvNotificationBadge"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:background="@drawable/notification_badge_background"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:visibility="gone"
+                            android:layout_marginEnd="16dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/btnNotifications"
+                            app:layout_constraintBottom_toBottomOf="@id/btnNotifications" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:id="@+id/divider2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="56dp"
+                        android:background="@color/light_gray"
+                        app:layout_constraintTop_toBottomOf="@id/notificationContainer" />
+
+                    <!-- Payment History -->
+                    <TextView
+                        android:id="@+id/btnPaymentHistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:drawableStart="@drawable/ic_payment"
+                        android:drawablePadding="16dp"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="16dp"
+                        android:text="Payment History"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+                    <View
+                        android:id="@+id/divider3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="56dp"
+                        android:background="@color/light_gray"
+                        app:layout_constraintTop_toBottomOf="@id/btnPaymentHistory" />
+
+                    <!-- Settings -->
+                    <TextView
+                        android:id="@+id/btnSettings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:drawableStart="@drawable/ic_settings"
+                        android:drawablePadding="16dp"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="16dp"
+                        android:text="Settings"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@id/divider3" />
+
+                    <View
+                        android:id="@+id/divider4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="56dp"
+                        android:background="@color/light_gray"
+                        app:layout_constraintTop_toBottomOf="@id/btnSettings" />
+
+                    <!-- Help Center -->
+                    <TextView
+                        android:id="@+id/btnHelp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:drawableStart="@drawable/ic_help"
+                        android:drawablePadding="16dp"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="16dp"
+                        android:text="Help Center"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@id/divider4" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Logout Button -->
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/button_white_bordered"
+                android:text="Logout"
+                android:textAllCaps="false"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardOptions" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/btnNavHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="16dp"
+            android:src="@drawable/ic_nav_home"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Home" />
+
+        <ImageView
+            android:id="@+id/btnNavSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="16dp"
+            android:src="@drawable/ic_nav_search"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Search" />
+
+        <ImageView
+            android:id="@+id/btnNavCourses"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="16dp"
+            android:src="@drawable/ic_nav_courses"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="My Courses" />
+
+        <ImageView
+            android:id="@+id/btnNavProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="16dp"
+            android:src="@drawable/ic_nav_profile_active"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Profile" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

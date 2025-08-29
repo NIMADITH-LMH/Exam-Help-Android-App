@@ -1,0 +1,136 @@
+<resources>
+    <string name="app_name">My Application</string>
+    
+    <!-- General UI Strings -->
+    <string name="search_hint">Search for courses...</string>
+    <string name="view_all">View All</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    
+    <!-- Course Categories -->
+    <string name="recommended_for_you">Recommended For You</string>
+    <string name="trending_courses">Trending Courses</string>
+    <string name="popular_courses">Popular Courses</string>
+    <string name="new_courses">New Courses</string>
+    
+    <!-- Course Details -->
+    <string name="course_price">%1$s</string>
+    <string name="enroll_now">Enroll Now</string>
+    <string name="course_details">Course Details</string>
+    <string name="lessons">Lessons</string>
+    <string name="reviews">Reviews</string>
+    
+    <!-- Profile & Account -->
+    <string name="profile">Profile</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="my_courses">My Courses</string>
+    <string name="logout">Logout</string>
+    
+    <!-- Notifications -->
+    <string name="notifications">Notifications</string>
+    <string name="notification_lesson">New Lesson Available</string>
+    <string name="notification_quiz">Quiz Reminder</string>
+    <string name="notification_payment">Payment Confirmation</string>
+    <string name="notification_system">System Notification</string>
+    <string name="notification_course_update">Course Update</string>
+    
+    <!-- Search -->
+    <string name="search_results">Search Results</string>
+    <string name="no_results_found">No results found for your search</string>
+    <string name="filter_results">Filter Results</string>
+    
+    <!-- Help & Support -->
+    <string name="help_center">Help Center</string>
+    <string name="faq">Frequently Asked Questions</string>
+    <string name="contact_us">Contact Us</string>
+    
+    <!-- Legal -->
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="privacy_policy_content">
+        &lt;h1&gt;Privacy Policy&lt;/h1&gt;
+        &lt;p&gt;Last updated: August 23, 2025&lt;/p&gt;
+        &lt;p&gt;Welcome to My Application. This Privacy Policy describes how we collect, use, and disclose your personal information when you use our e-learning application.&lt;/p&gt;
+        
+        &lt;h2&gt;Information We Collect&lt;/h2&gt;
+        &lt;p&gt;We collect several types of information from and about users of our application, including:&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Personal information (name, email address, phone number) that you provide when registering or creating an account.&lt;/li&gt;
+            &lt;li&gt;Education information such as your learning progress, course completions, and quiz results.&lt;/li&gt;
+            &lt;li&gt;Payment information when you make purchases within the application.&lt;/li&gt;
+            &lt;li&gt;Device information including your device type, operating system, and application version.&lt;/li&gt;
+            &lt;li&gt;Log data such as your search queries, page views, and interaction with the app features.&lt;/li&gt;
+        &lt;/ul&gt;
+        
+        &lt;h2&gt;How We Use Your Information&lt;/h2&gt;
+        &lt;p&gt;We use the information we collect to:&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Provide, maintain, and improve our services to you.&lt;/li&gt;
+            &lt;li&gt;Process your transactions and send related information including confirmations and receipts.&lt;/li&gt;
+            &lt;li&gt;Personalize your learning experience and recommend courses based on your interests and progress.&lt;/li&gt;
+            &lt;li&gt;Send you notifications about new courses, updates, or features.&lt;/li&gt;
+            &lt;li&gt;Analyze usage patterns to enhance and optimize our application.&lt;/li&gt;
+        &lt;/ul&gt;
+        
+        &lt;h2&gt;Data Security&lt;/h2&gt;
+        &lt;p&gt;We implement appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. However, no internet-based service can guarantee absolute security.&lt;/p&gt;
+        
+        &lt;h2&gt;Your Rights&lt;/h2&gt;
+        &lt;p&gt;You have the right to access, update, or delete your personal information at any time through your account settings or by contacting us directly.&lt;/p&gt;
+        
+        &lt;h2&gt;Changes to This Privacy Policy&lt;/h2&gt;
+        &lt;p&gt;We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.&lt;/p&gt;
+        
+        &lt;h2&gt;Contact Us&lt;/h2&gt;
+        &lt;p&gt;If you have any questions about this Privacy Policy, please contact us at support@myapplication.com&lt;/p&gt;
+    </string>
+    
+    <string name="terms_and_conditions">Terms &amp; Conditions</string>
+    <string name="terms_and_conditions_content">
+        &lt;h1&gt;Terms and Conditions&lt;/h1&gt;
+        &lt;p&gt;Last updated: August 23, 2025&lt;/p&gt;
+        &lt;p&gt;Please read these Terms and Conditions carefully before using the My Application e-learning platform.&lt;/p&gt;
+        
+        &lt;h2&gt;1. Agreement to Terms&lt;/h2&gt;
+        &lt;p&gt;By accessing or using our application, you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the application.&lt;/p&gt;
+        
+        &lt;h2&gt;2. User Accounts&lt;/h2&gt;
+        &lt;p&gt;When you create an account with us, you must provide information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your account.&lt;/p&gt;
+        &lt;p&gt;You are responsible for safeguarding the password and for all activities that occur under your account.&lt;/p&gt;
+        
+        &lt;h2&gt;3. Course Enrollment and Payments&lt;/h2&gt;
+        &lt;p&gt;Some courses on our platform require payment before enrollment. All payments are processed securely through our payment providers.&lt;/p&gt;
+        &lt;p&gt;Course fees are non-refundable unless explicitly stated otherwise for specific courses.&lt;/p&gt;
+        
+        &lt;h2&gt;4. Intellectual Property&lt;/h2&gt;
+        &lt;p&gt;The application and its original content, features, and functionality are owned by My Application and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.&lt;/p&gt;
+        
+        &lt;h2&gt;5. User Conduct&lt;/h2&gt;
+        &lt;p&gt;You agree not to:&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Use the application in any way that violates any applicable local, state, national, or international law.&lt;/li&gt;
+            &lt;li&gt;Share your account credentials with any third party.&lt;/li&gt;
+            &lt;li&gt;Attempt to bypass any security measures of the application.&lt;/li&gt;
+            &lt;li&gt;Distribute, copy, or share course materials without explicit permission.&lt;/li&gt;
+            &lt;li&gt;Engage in any conduct that restricts or inhibits anyone\'s use or enjoyment of the application.&lt;/li&gt;
+        &lt;/ul&gt;
+        
+        &lt;h2&gt;6. Limitation of Liability&lt;/h2&gt;
+        &lt;p&gt;In no event shall My Application be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses.&lt;/p&gt;
+        
+        &lt;h2&gt;7. Termination&lt;/h2&gt;
+        &lt;p&gt;We may terminate or suspend your account immediately, without prior notice or liability, for any reason, including without limitation if you breach the Terms.&lt;/p&gt;
+        
+        &lt;h2&gt;8. Changes to Terms&lt;/h2&gt;
+        &lt;p&gt;We reserve the right to modify or replace these Terms at any time at our sole discretion. By continuing to access or use our application after those revisions become effective, you agree to be bound by the revised terms.&lt;/p&gt;
+        
+        &lt;h2&gt;9. Contact Us&lt;/h2&gt;
+        &lt;p&gt;If you have any questions about these Terms, please contact us at legal@myapplication.com&lt;/p&gt;
+    </string>
+    
+    <!-- Messages -->
+    <string name="loading">Loading...</string>
+    <string name="error_occurred">An error occurred</string>
+    <string name="retry">Retry</string>
+</resources>
