@@ -15,8 +15,6 @@ An Android application designed to help students prepare for exams by providing 
 - **Search Functionality:** Quickly find courses, lessons, and more.
 - **Privacy & Terms:** View privacy policy and terms & conditions within the app.
 
-## Screenshots
-<!-- Add screenshots of your app here -->
 
 ## Getting Started
 
